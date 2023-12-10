@@ -52,7 +52,7 @@ fn main() {
         .read_line(&mut message)
         .expect("Failed to read message");
 
-    println!("Enter shif value: ");
+    println!("Enter shift value: ");
     let mut shift_str: String = String::new();
     io::stdin()
         .read_line(&mut shift_str)
