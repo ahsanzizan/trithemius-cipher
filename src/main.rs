@@ -1,6 +1,6 @@
 use std::io;
 
-fn trithemius_vigenere_cipher(message: &str, shift: u8) -> String {
+fn trithemius_cipher(message: &str, shift: u8) -> String {
     let message_chars: Vec<char> = message.chars().collect();
 
     let mut result: String = String::new();
@@ -44,6 +44,6 @@ fn main() {
         }
     };
 
-    let encrypted_message: String = trithemius_vigenere_cipher(&message, shift);
+    let encrypted_message: String = trithemius_cipher(&message, shift);
     println!("Encrypted message: {}", encrypted_message);
 }
