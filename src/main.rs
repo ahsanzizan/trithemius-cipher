@@ -34,13 +34,13 @@ fn main() {
     let mut shift_str: String = String::new();
     io::stdin()
         .read_line(&mut shift_str)
-        .expect("Failed to read shif");
+        .expect("Failed to read shift");
 
     let shift: u8 = match shift_str.trim().parse() {
         Ok(num) => num,
         Err(_) => {
             println!("Invalid shift value, Defaulting to 4");
-            3
+            4
         }
     };
 
