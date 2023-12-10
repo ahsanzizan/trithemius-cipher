@@ -23,6 +23,28 @@ fn trithemius_cipher(message: &str, shift: u8) -> String {
     result
 }
 
+fn trithemius_decipher(message: &str, shift: u8) -> String {
+    let message_chars: Vec<char> = message.chars().collect();
+
+    let mut result: String = String::new();
+
+    for &c in message_chars.iter() {
+        if c.is_alphabetic() {
+            let base: u8 = if c.is_lowercase() {
+                'a' as u8
+            } else {
+                'A' as u8
+            };
+            let decrypted_char: char = ((((c as u8 - base) + 26 - shift) % 26) + base) as char;
+            result.push(decrypted_char);
+        } else {
+            result.push(c);
+        }
+    }
+
+    result
+}
+
 fn main() {
     println!("Message to encrypt: ");
     let mut message: String = String::new();

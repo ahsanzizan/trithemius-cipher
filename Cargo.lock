@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "vigenere-cipher"
+name = "trithemius-cipher"
 version = "0.1.0"
