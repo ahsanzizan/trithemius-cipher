@@ -1,2 +1,2 @@
-# vigenere-cipher
+# trithemius-cipher
 Trithemius Cipher implemented in Rust
